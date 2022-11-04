@@ -1,0 +1,7 @@
+# SMTPサーバー
+# mail.smtp.portをアクセスできないポート番号に設定する。
+mail.smtp.host={SMTPサーバーのIPアドレス}
+mail.smtp.port={不正なSMTPサーバーのポート番号}
+mail.smtp.from={差出元メールアドレス}
+mail.smtp.connectiontimeout={ミリ秒}
+mail.smtp.timeout={ミリ秒}

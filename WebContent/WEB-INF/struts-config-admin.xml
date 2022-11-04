@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<!--
+     This is a blank Struts configuration file with an example
+     welcome action/page and other commented sample elements.
+
+     Struts Validator is configured using the factory defaults
+     and is ready-to-use.
+
+     NOTE: If you have a generator tool to create the corresponding Java classes
+     for you, you could include the details in the "form-bean" declarations.
+     Otherwise, you would only define the "form-bean" element itself, with the
+     corresponding "name" and "type" attributes, as shown here.
+-->
+
+
+<struts-config>
+
+
+<!-- ================================================ Form Bean Definitions -->
+
+    <form-beans>
+        <form-bean
+            name="AdminLoginExecuteActionForm"
+            type="admin.actionform.login.AdminLoginExecuteActionForm"/>
+        <form-bean
+            name="AdminListAccountActionForm"
+            type="admin.actionform.account.AdminListAccountActionForm"/>
+        <form-bean
+            name="AdminSearchAccountActionForm"
+            type="admin.actionform.account.AdminSearchAccountActionForm"/>
+        <form-bean
+            name="AdminCreateAccountActionForm"
+            type="admin.actionform.account.AdminCreateAccountActionForm"/>
+        <form-bean
+            name="AdminEditAccountActionForm"
+            type="admin.actionform.account.AdminEditAccountActionForm"/>
+        <form-bean
+            name="AdminDeleteAccountActionForm"
+            type="admin.actionform.account.AdminDeleteAccountActionForm"/>
+        <form-bean
+            name="AdminListSchoolActionForm"
+            type="admin.actionform.school.AdminListSchoolActionForm"/>
+        <form-bean
+            name="AdminSearchSchoolActionForm"
+            type="admin.actionform.school.AdminSearchSchoolActionForm"/>
+        <form-bean
+            name="AdminUploadSchoolCsvActionForm"
+            type="admin.actionform.school.AdminUploadSchoolCsvActionForm"/>
+        <form-bean
+            name="AdminRegisterSchoolActionForm"
+            type="admin.actionform.school.AdminRegisterSchoolActionForm"/>
+        <form-bean
+            name="AdminEditSchoolActionForm"
+            type="admin.actionform.school.AdminEditSchoolActionForm"/>
+        <form-bean
+            name="AdminDeleteSchoolActionForm"
+            type="admin.actionform.school.AdminDeleteSchoolActionForm"/>
+        <form-bean
+            name="AdminListReceivedEntryActionForm"
+            type="admin.actionform.entry.AdminListReceivedEntryActionForm"/>
+        <form-bean
+            name="AdminSearchReceivedEntryActionForm"
+            type="admin.actionform.entry.AdminSearchReceivedEntryActionForm"/>
+        <form-bean
+            name="AdminViewReceivedEntryActionForm"
+            type="admin.actionform.entry.AdminViewReceivedEntryActionForm"/>
+        <form-bean
+            name="AdminListCategoryActionForm"
+            type="admin.actionform.category.AdminListCategoryActionForm"/>
+        <form-bean
+            name="AdminUploadCategoryCsvActionForm"
+            type="admin.actionform.category.AdminUploadCategoryCsvActionForm"/>
+        <form-bean
+            name="AdminCreateCategoryActionForm"
+            type="admin.actionform.category.AdminCreateCategoryActionForm"/>
+        <form-bean
+            name="AdminEditCategoryActionForm"
+            type="admin.actionform.category.AdminEditCategoryActionForm"/>
+        <form-bean
+            name="AdminDeleteCategoryActionForm"
+            type="admin.actionform.category.AdminDeleteCategoryActionForm"/>
+        <form-bean
+            name="AdminListContactActionForm"
+            type="admin.actionform.contact.AdminListContactActionForm"/>
+        <form-bean
+            name="AdminSearchContactActionForm"
+            type="admin.actionform.contact.AdminSearchContactActionForm"/>
+        <form-bean
+            name="AdminViewDetailedContactActionForm"
+            type="admin.actionform.contact.AdminViewDetailedContactActionForm"/>
+    </form-beans>
+
+
+<!-- ========================================= Global Exception Definitions -->
+
+    <global-exceptions>
+        <exception
+            type="java.io.IOException"
+            key="error.IOException"
+            path="/jsp/error.jsp"/>
+        <exception
+            type="java.sql.SQLException"
+            key="error.SQLException"
+            path="/jsp/error.jsp"/>
+        <exception
+            type="java.lang.RuntimeException"
+            key="error.RuntimeException"
+            path="/jsp/error.jsp"/>
+        <exception
+            type="javax.servlet.ServletException"
+            key="error.ServletException"
+            path="/jsp/error.jsp"/>
+        <exception
+            type="java.lang.Exception"
+            key="error.Exception"
+            path="/jsp/error.jsp"/>
+    </global-exceptions>
+
+
+<!-- =========================================== Global Forward Definitions -->
+
+    <global-forwards>
+        <forward name="fail" path="/jsp/fail.jsp"/>
+        <forward name="error" path="/jsp/error.jsp"/>
+    </global-forwards>
+
+
+<!-- =========================================== Action Mapping Definitions -->
+
+    <action-mappings>
+        <action
+            path="/index"
+            type="admin.action.IndexAction"
+            scope="session">
+            <forward name="success" path="/jsp/index.jsp"/>
+        </action>
+        <action
+            path="/login"
+            type="admin.action.login.LoginAction"
+            scope="session">
+            <forward name="success" path="/jsp/login/login.jsp"/>
+            <forward name="adminLogined" path="/index.do" redirect="true"/>
+        </action>
+        <action
+            path="/loginExecute"
+            type="admin.action.login.LoginExecuteAction"
+            name="AdminLoginExecuteActionForm"
+            scope="session"
+            input="/jsp/login/login.jsp">
+            <forward name="invalid" path="/login.do" redirect="true"/>
+            <forward name="redo" path="/jsp/login/login.jsp"/>
+        </action>
+        <action
+            path="/logout"
+            type="admin.action.login.LogoutAction"
+            scope="session">
+            <forward name="success" path="/login.do" redirect="true"/>
+            <forward name="adminLogout" path="/login.do" redirect="true"/>
+        </action>
+        <action
+            path="/listAccount"
+            type="admin.action.account.ListAccountAction"
+            name="AdminListAccountActionForm"
+            scope="session">
+            <forward name="success" path="/jsp/account/listAccount.jsp"/>
+        </action>
+        <action
+            path="/searchAccount"
+            type="admin.action.account.SearchAccountAction"
+            name="AdminSearchAccountActionForm"
+            scope="request"
+            input="/jsp/account/listAccount.jsp">
+        </action>
+        <action
+            path="/downloadAccountCsv"
+            type="admin.action.account.DownloadAccountCsvAction"
+            name="AdminListAccountActionForm"
+            scope="session">
+        </action>
+        <action
+            path="/createAccountInput"
+            type="admin.action.account.CreateAccountInputAction"
+            scope="session">
+            <forward name="success" path="/jsp/account/createAccountInput.jsp"/>
+        </action>
+        <action
+            path="/createAccountConfirm"
+            type="admin.action.account.CreateAccountConfirmAction"
+            name="AdminCreateAccountActionForm"
+            scope="session"
+            input="/jsp/account/createAccountInput.jsp">
+            <forward name="success" path="/jsp/account/createAccountConfirm.jsp"/>
+            <forward name="invalid" path="/createAccountInput.do" redirect="true"/>
+            <forward name="redo" path="/jsp/account/createAccountInput.jsp"/>
+        </action>
+        <action
+            path="/createAccountComplete"
+            type="admin.action.account.CreateAccountCompleteAction"
+            name="AdminCreateAccountActionForm"
+            scope="session"
+            parameter="dispatch">
+            <forward name="fix" path="/jsp/account/createAccountInput.jsp"/>
+            <forward name="create" path="/jsp/account/createAccountComplete.jsp"/>
+            <forward name="invalid" path="/createAccountInput.do" redirect="true"/>
+        </action>
+        <action
+            path="/editAccountInput"
+            type="admin.action.account.EditAccountInputAction"
+            scope="session">
+            <forward name="success" path="/jsp/account/editAccountInput.jsp"/>
+            <forward name="unexistence" path="/jsp/account/unexistenceAccount.jsp"/>
+        </action>
+        <action
+            path="/editAccountConfirm"
+            type="admin.action.account.EditAccountConfirmAction"
+            name="AdminEditAccountActionForm"
+            scope="session"
+            input="/jsp/account/editAccountInput.jsp">
+            <forward name="success" path="/jsp/account/editAccountConfirm.jsp"/>
+            <forward name="invalid" path="/editAccountInput.do" redirect="true"/>
+            <forward name="redo" path="/jsp/account/editAccountInput.jsp"/>
+        </action>
+        <action
+            path="/editAccountComplete"
+            type="admin.action.account.EditAccountCompleteAction"
+            name="AdminEditAccountActionForm"
+            scope="session"
+            parameter="dispatch">
+            <forward name="fix" path="/jsp/account/editAccountInput.jsp"/>
+            <forward name="edit" path="/jsp/account/editAccountComplete.jsp"/>
+            <forward name="invalid" path="/editAccountInput.do" redirect="true"/>
+        </action>
+        <action
+            path="/deleteAccountConfirm"
+            type="admin.action.account.DeleteAccountConfirmAction"
+            scope="session">
+            <forward name="success" path="/jsp/account/deleteAccountConfirm.jsp"/>
+            <forward name="unexistence" path="/jsp/account/unexistenceAccount.jsp"/>
+        </action>
+        <action
+            path="/deleteAccountComplete"
+            type="admin.action.account.DeleteAccountCompleteAction"
+            name="AdminDeleteAccountActionForm"
+            scope="session">
+            <forward name="success" path="/jsp/account/deleteAccountComplete.jsp"/>
+            <forward name="invalid" path="/deleteAccountConfirm.do" redirect="true"/>
+        </action>
+        <action
+            path="/listSchool"
+            type="admin.action.school.ListSchoolAction"
+            name="AdminListSchoolActionForm"
+            scope="session">
+            <forward name="success" path="/jsp/school/listSchool.jsp"/>
+        </action>
+        <action
+            path="/searchSchool"
+            type="admin.action.school.SearchSchoolAction"
+            name="AdminSearchSchoolActionForm"
+            scope="request"
+            input="/jsp/school/listSchool.jsp">
+        </action>
+        <action
+            path="/downloadSchoolCsv"
+            type="admin.action.school.DownloadSchoolCsvAction"
+            name="AdminListSchoolActionForm"
+            scope="session">
+        </action>
+        <action
+            path="/uploadSchoolCsv"
+            type="admin.action.school.UploadSchoolCsvAction"
+            name="AdminUploadSchoolCsvActionForm"
+            scope="request"
+            input="/jsp/school/listSchool.jsp">
+        </action>
+        <action
+            path="/registerSchoolInput"
+            type="admin.action.school.RegisterSchoolInputAction"
+            scope="session">
+            <forward name="success" path="/jsp/school/registerSchoolInput.jsp"/>
+        </action>
+        <action
+            path="/registerSchoolConfirm"
+            type="admin.action.school.RegisterSchoolConfirmAction"
+            name="AdminRegisterSchoolActionForm"
+            scope="session"
+            input="/jsp/school/registerSchoolInput.jsp">
+            <forward name="success" path="/jsp/school/registerSchoolConfirm.jsp"/>
+            <forward name="invalid" path="/registerSchoolInput.do" redirect="true"/>
+        </action>
+        <action
+            path="/registerSchoolComplete"
+            type="admin.action.school.RegisterSchoolCompleteAction"
+            name="AdminRegisterSchoolActionForm"
+            scope="session"
+            parameter="dispatch">
+            <forward name="fix" path="/jsp/school/registerSchoolInput.jsp"/>
+            <forward name="register" path="/jsp/school/registerSchoolComplete.jsp"/>
+            <forward name="invalid" path="/registerSchoolInput.do" redirect="true"/>
+        </action>
+        <action
+            path="/editSchoolInput"
+            type="admin.action.school.EditSchoolInputAction"
+            scope="session">
+            <forward name="success" path="/jsp/school/editSchoolInput.jsp"/>
+            <forward name="unexistence" path="/jsp/school/unexistenceSchool.jsp"/>
+        </action>
+        <action
+            path="/editSchoolConfirm"
+            type="admin.action.school.EditSchoolConfirmAction"
+            name="AdminEditSchoolActionForm"
+            scope="session"
+            input="/jsp/school/editSchoolInput.jsp">
+            <forward name="success" path="/jsp/school/editSchoolConfirm.jsp"/>
+            <forward name="invalid" path="/editSchoolInput.do" redirect="true"/>
+        </action>
+        <action
+            path="/editSchoolComplete"
+            type="admin.action.school.EditSchoolCompleteAction"
+            name="AdminEditSchoolActionForm"
+            scope="session"
+            parameter="dispatch">
+            <forward name="fix" path="/jsp/school/editSchoolInput.jsp"/>
+            <forward name="edit" path="/jsp/school/editSchoolComplete.jsp"/>
+            <forward name="invalid" path="/editSchoolInput.do" redirect="true"/>
+        </action>
+        <action
+            path="/deleteSchoolConfirm"
+            type="admin.action.school.DeleteSchoolConfirmAction"
+            scope="session">
+            <forward name="success" path="/jsp/school/deleteSchoolConfirm.jsp"/>
+            <forward name="unexistence" path="/jsp/school/unexistenceSchool.jsp"/>
+        </action>
+        <action
+            path="/deleteSchoolComplete"
+            type="admin.action.school.DeleteSchoolCompleteAction"
+            name="AdminDeleteSchoolActionForm"
+            scope="session">
+            <forward name="success" path="/jsp/school/deleteSchoolComplete.jsp"/>
+            <forward name="invalid" path="/deleteSchoolConfirm.do" redirect="true"/>
+        </action>
+        <action
+            path="/listReceivedEntry"
+            type="admin.action.entry.ListReceivedEntryAction"
+            name="AdminListReceivedEntryActionForm"
+            scope="session">
+            <forward name="success" path="/jsp/entry/listReceivedEntry.jsp"/>
+        </action>
+        <action
+            path="/searchReceivedEntry"
+            type="admin.action.entry.SearchReceivedEntryAction"
+            name="AdminSearchReceivedEntryActionForm"
+            scope="request"
+            input="/jsp/entry/listReceivedEntry.jsp">
+        </action>
+        <action
+            path="/downloadReceivedEntryCsv"
+            type="admin.action.entry.DownloadReceivedEntryCsvAction"
+            name="AdminListReceivedEntryActionForm"
+            scope="session">
+        </action>
+        <action
+            path="/viewReceivedEntry"
+            type="admin.action.entry.ViewReceivedEntryAction"
+            name="AdminViewReceivedEntryActionForm"
+            scope="session">
+            <forward name="success" path="/jsp/entry/viewReceivedEntry.jsp"/>
+            <forward name="unexistence" path="/jsp/entry/unexistenceReceivedEntry.jsp"/>
+        </action>
+        <action
+            path="/updateEntryStatus"
+            type="admin.action.entry.UpdateEntryStatusAction"
+            name="AdminViewReceivedEntryActionForm"
+            scope="session">
+            <forward name="invalid" path="/viewReceivedEntry.do" redirect="true"/>
+        </action>
+        <action
+            path="/listCategory"
+            type="admin.action.category.ListCategoryAction"
+            name="AdminListCategoryActionForm"
+            scope="session">
+            <forward name="success" path="/jsp/category/listCategory.jsp"/>
+        </action>
+        <action
+            path="/downloadCategoryCsv"
+            type="admin.action.category.DownloadCategoryCsvAction"
+            name="AdminListCategoryActionForm"
+            scope="session">
+        </action>
+        <action
+            path="/uploadCategoryCsv"
+            type="admin.action.category.UploadCategoryCsvAction"
+            name="AdminUploadCategoryCsvActionForm"
+            scope="request"
+            input="/jsp/category/listCategory.jsp">
+        </action>
+        <action
+            path="/createCategoryInput"
+            type="admin.action.category.CreateCategoryInputAction"
+            scope="session">
+            <forward name="success" path="/jsp/category/createCategory.jsp"/>
+        </action>
+        <action
+            path="/createCategoryComplete"
+            type="admin.action.category.CreateCategoryCompleteAction"
+            name="AdminCreateCategoryActionForm"
+            scope="session"
+            input="/jsp/category/createCategory.jsp">
+            <forward name="success" path="/listCategory.do" redirect="true"/>
+            <forward name="invalid" path="/createCategoryInput.do" redirect="true"/>
+            <forward name="redo" path="/jsp/category/createCategory.jsp"/>
+        </action>
+        <action
+            path="/editCategoryInput"
+            type="admin.action.category.EditCategoryInputAction"
+            scope="session">
+            <forward name="success" path="/jsp/category/editCategory.jsp"/>
+            <forward name="unexistence" path="/jsp/category/unexistenceCategory.jsp"/>
+        </action>
+        <action
+            path="/editCategoryComplete"
+            type="admin.action.category.EditCategoryCompleteAction"
+            name="AdminEditCategoryActionForm"
+            scope="session"
+            input="/jsp/category/editCategory.jsp">
+            <forward name="success" path="/listCategory.do" redirect="true"/>
+            <forward name="invalid" path="/editCategoryInput.do" redirect="true"/>
+            <forward name="redo" path="/jsp/category/editCategory.jsp"/>
+        </action>
+        <action
+            path="/deleteCategory"
+            type="admin.action.category.DeleteCategoryAction"
+            name="AdminDeleteCategoryActionForm"
+            scope="session">
+            <forward name="success" path="/listCategory.do" redirect="true"/>
+            <forward name="unexistence" path="/jsp/category/unexistenceCategory.jsp"/>
+        </action>
+        <action
+            path="/listContact"
+            type="admin.action.contact.ListContactAction"
+            name="AdminListContactActionForm"
+            scope="session">
+            <forward name="success" path="/jsp/contact/listContact.jsp"/>
+        </action>
+        <action
+            path="/searchContact"
+            type="admin.action.contact.SearchContactAction"
+            name="AdminSearchContactActionForm"
+            scope="request"
+            input="/jsp/contact/listContact.jsp">
+        </action>
+        <action
+            path="/downloadContactCsv"
+            type="admin.action.contact.DownloadContactCsvAction"
+            name="AdminListContactActionForm"
+            scope="session">
+        </action>
+        <action
+            path="/viewDetailedContact"
+            type="admin.action.contact.ViewDetailedContactAction"
+            name="AdminViewDetailedContactActionForm"
+            scope="session">
+            <forward name="success" path="/jsp/contact/viewDetailedContact.jsp"/>
+            <forward name="unexistence" path="/jsp/contact/unexistenceContact.jsp"/>
+        </action>
+        <action
+            path="/updateContactStatus"
+            type="admin.action.contact.UpdateContactStatusAction"
+            name="AdminViewDetailedContactActionForm"
+            scope="session">
+            <forward name="invalid" path="/viewDetailedContact.do" redirect="true"/>
+        </action>
+    </action-mappings>
+
+
+<!-- ======================================== Message Resources Definitions -->
+
+    <message-resources parameter="MessageResourcesAdmin"/>
+
+
+<!-- =============================================== Plug Ins Configuration -->
+
+  <!-- ======================================================= Tiles plugin -->
+  <!--
+     This plugin initialize Tiles definition factory. This later can takes some
+     parameters explained here after. The plugin first read parameters from
+     web.xml, thenoverload them with parameters defined here. All parameters
+     are optional.
+     The plugin should be declared in each struts-config file.
+       - definitions-config: (optional)
+            Specify configuration file names. There can be several comma
+                separated file names (default: ?? )
+       - moduleAware: (optional - struts1.1)
+            Specify if the Tiles definition factory is module aware. If true
+            (default), there will be one factory for each Struts module.If false, there will be one common factory for all module. In this
+            later case, it is still needed to declare one plugin per module.
+            The factory will be initialized with parameters found in the first
+            initialized plugin (generally the one associated with the default
+            module).
+              true : One factory per module. (default)
+              false : one single shared factory for all modules
+       - definitions-parser-validate: (optional)
+            Specify if xml parser should validate the Tiles configuration file.
+              true : validate. DTD should be specified in file header (default)
+                false : no validation
+
+      Paths found in Tiles definitions are relative to the main context.
+
+      To use this plugin, download and add the Tiles jar to your WEB-INF/lib
+      directory then uncomment the plugin definition below.
+
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+
+      <set-property property="definitions-config"
+                       value="/WEB-INF/tiles-defs.xml" />
+      <set-property property="moduleAware" value="true" />
+    </plug-in>
+  -->
+
+
+  <!-- =================================================== Validator plugin -->
+
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property
+        property="pathnames"
+        value="/org/apache/struts/validator/validator-rules.xml,
+               /WEB-INF/validation-admin.xml"/>
+  </plug-in>
+
+</struts-config>

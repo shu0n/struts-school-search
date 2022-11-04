@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <accounts
+        account_id="1"
+        last_name="山田"
+        first_name="次郎"
+        last_name_kana="ヤマダ"
+        first_name_kana="ジロウ"
+        sex_id="3"
+        birth_date="1991-02-03 00:00:00"
+        prefecture_id="4"
+        mail_address="yamada@example.com"
+        profile_image_file_name="updateProfileImage.png"
+        self_introduction="山田の自己紹介です。"
+        password="password"
+        account_status="1"
+    />
+</dataset>

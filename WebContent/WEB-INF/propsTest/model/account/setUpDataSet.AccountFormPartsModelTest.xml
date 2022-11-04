@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <sexes
+        sex_id="1"
+        sex_name="男性"
+    />
+    <sexes
+        sex_id="2"
+        sex_name="女性"
+    />
+    <sexes
+        sex_id="3"
+        sex_name="その他"
+    />
+    <prefectures
+        prefecture_id="1"
+        prefecture_name="北海道"
+    />
+    <prefectures
+        prefecture_id="2"
+        prefecture_name="東京都"
+    />
+    <prefectures
+        prefecture_id="3"
+        prefecture_name="静岡県"
+    />
+    <prefectures
+        prefecture_id="4"
+        prefecture_name="京都府"
+    />
+    <accounts
+        account_id="1"
+        last_name="田中"
+        first_name="太郎"
+        last_name_kana="タナカ"
+        first_name_kana="タロウ"
+        prefecture_id="3"
+        mail_address="tanaka@example.com"
+        password="password"
+        account_status="1"
+        account_updated_at="2021-01-02 01:01:01"
+        account_delete_flag="0"
+        account_deleted_at="[null]"
+    />
+    <accounts
+        account_id="3"
+        last_name="山田"
+        first_name="花子"
+        last_name_kana="ヤマダ"
+        first_name_kana="ハナコ"
+        prefecture_id="2"
+        mail_address="yamada@example.com"
+        password="pbssword"
+        account_status="1"
+        account_updated_at="2021-01-04 01:01:01"
+        account_delete_flag="0"
+        account_deleted_at="[null]"
+    />
+    <accounts
+        account_id="6"
+        last_name="佐藤"
+        first_name="次郎"
+        last_name_kana="サトウ"
+        first_name_kana="ジロウ"
+        prefecture_id="3"
+        mail_address="satou@example.com"
+        password="pcssword"
+        account_status="0"
+        account_updated_at="2021-02-02 01:01:01"
+        account_delete_flag="0"
+        account_deleted_at="[null]"
+    />
+    <accounts
+        account_id="8"
+        last_name="高橋"
+        first_name="京子"
+        last_name_kana="タカハシ"
+        first_name_kana="キョウコ"
+        prefecture_id="4"
+        mail_address="takahashi@test.com"
+        password="pcssword"
+        account_status="1"
+        account_updated_at="2022-01-02 01:01:01"
+        account_delete_flag="0"
+        account_deleted_at="[null]"
+    />
+    <accounts
+        account_id="10"
+        last_name="前田"
+        first_name="四郎"
+        last_name_kana="マエダ"
+        first_name_kana="シロウ"
+        prefecture_id="1"
+        mail_address="maeda@test.com"
+        password="pcssword"
+        account_status="0"
+        account_updated_at="2022-01-05 01:01:01"
+        account_delete_flag="1"
+        account_deleted_at="2022-11-11 11:11:11"
+    />
+</dataset>

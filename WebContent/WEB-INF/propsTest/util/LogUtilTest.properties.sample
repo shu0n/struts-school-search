@@ -1,0 +1,9 @@
+# エラーログファイルの格納先パス
+error.log.path={ルートからの絶対パス}/WEB-INF/propsTest/util
+# エラーログの保存期間(日)
+error.log.retention.period={ログの保存期限日数}
+
+# メールログファイルの格納先パス
+mail.log.path={ルートからの絶対パス}/WEB-INF/propsTest/util
+# エラーログの保存期間(日)
+mail.log.retention.period={ログの保存期限日数}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <sexes
+        sex_id="1"
+        sex_name="男性"
+    />
+    <sexes
+        sex_id="2"
+        sex_name="女性"
+    />
+    <sexes
+        sex_id="3"
+        sex_name="その他"
+    />
+    <prefectures
+        prefecture_id="1"
+        prefecture_name="北海道"
+    />
+    <prefectures
+        prefecture_id="2"
+        prefecture_name="東京都"
+    />
+    <prefectures
+        prefecture_id="3"
+        prefecture_name="静岡県"
+    />
+    <prefectures
+        prefecture_id="4"
+        prefecture_name="京都府"
+    />
+</dataset>

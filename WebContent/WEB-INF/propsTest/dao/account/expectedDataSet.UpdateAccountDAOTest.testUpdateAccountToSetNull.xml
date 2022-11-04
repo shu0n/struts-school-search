@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <accounts
+        account_id="2"
+        last_name="高橋"
+        first_name="京子"
+        last_name_kana="タカハシ"
+        first_name_kana="キョウコ"
+        sex_id="3"
+        birth_date="[null]"
+        prefecture_id="4"
+        mail_address="takahashi@test.com"
+        profile_image_file_name="jmage.png"
+        self_introduction="自己紹介です。"
+        password="pcssword"
+        account_status="1"
+        activate_token="[null]"
+        activate_effective_date="[null]"
+        reissue_token="[null]"
+        reissue_effective_date="[null]"
+        account_created_at="2022-01-05 06:07:08.912"
+        account_updated_at="2022-03-04 05:06:07.891"
+        account_delete_flag="0"
+        account_deleted_at="[null]"
+    />
+</dataset>

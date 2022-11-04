@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <accounts
+        account_id="1"
+        last_name="更新山田"
+        first_name="更新花子"
+        last_name_kana="コウシンヤマダ"
+        first_name_kana="コウシンハナコ"
+        sex_id="3"
+        birth_date="1991-02-03 00:00:00"
+        prefecture_id="4"
+        mail_address="updateYamada@example.com"
+        profile_image_file_name="updateImage.png"
+        self_introduction="更新自己紹介です。"
+        password="updatePbssword"
+        account_status="1"
+        activate_token="updateActivatetoken"
+        activate_effective_date="2022-02-03 04:05:06.789"
+        reissue_token="updateReissuetoken"
+        reissue_effective_date="2022-02-04 05:06:07.891"
+        account_created_at="2021-01-03 04:05:06.789"
+        account_updated_at="2022-03-04 05:06:07.891"
+        account_delete_flag="0"
+        account_deleted_at="[null]"
+    />
+</dataset>

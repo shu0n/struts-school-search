@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <sexes
+        sex_id="1"
+        sex_name="男性"
+    />
+    <sexes
+        sex_id="2"
+        sex_name="女性"
+    />
+    <sexes
+        sex_id="3"
+        sex_name="その他"
+    />
+    <prefectures
+        prefecture_id="1"
+        prefecture_name="北海道"
+    />
+    <prefectures
+        prefecture_id="2"
+        prefecture_name="福島県"
+    />
+    <prefectures
+        prefecture_id="3"
+        prefecture_name="東京都"
+    />
+    <accounts
+        account_id="1"
+        last_name="田中"
+        first_name="太郎"
+        last_name_kana="タナカ"
+        first_name_kana="タロウ"
+        sex_id="2"
+        birth_date="1990-01-01 00:00:00"
+        prefecture_id="3"
+        mail_address="tanaka@example.com"
+        profile_image_file_name="image1.png"
+        self_introduction="自己紹介です。"
+        password="password"
+        account_status="1"
+        account_created_at="2021-01-02 03:04:05.678"
+        account_updated_at="2021-01-03 04:05:06.789"
+    />
+</dataset>

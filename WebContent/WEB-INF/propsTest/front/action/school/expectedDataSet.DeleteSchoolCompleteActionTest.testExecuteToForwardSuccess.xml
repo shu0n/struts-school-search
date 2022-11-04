@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <schools
+        school_id="1"
+        registrant_account_id="22"
+        registrant_admin_id="[null]"
+        school_name="テストスクール1"
+        school_category_id="33"
+        school_summary="スクール概要1"
+        school_description="スクール詳細1"
+        school_zip_code1="123"
+        school_zip_code2="4567"
+        school_prefecture_id="14"
+        school_city="大阪市"
+        school_address1="大阪区"
+        school_address2="大阪町"
+        school_fee="5432"
+        supplementary_fee="費用補足1"
+        school_url="http://test1.com"
+        school_release_propriety="0"
+        school_entry_propriety="0"
+        summary_image_file_name="summary_image11.png"
+        detail_image1_file_name="detail_image11.png"
+        detail_image2_file_name="detail_image12.png"
+        detail_image3_file_name="detail_image13.png"
+        detail_image4_file_name="detail_image14.png"
+        detail_image5_file_name="detail_image15.png"
+        detail_image6_file_name="detail_image16.png"
+        detail_image7_file_name="detail_image17.png"
+        detail_image8_file_name="detail_image18.png"
+        school_delete_flag="1"
+    />
+</dataset>

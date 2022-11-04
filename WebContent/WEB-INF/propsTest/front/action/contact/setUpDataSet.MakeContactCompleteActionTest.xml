@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <mail_templetes
+        mail_templete_id="1"
+        mail_templete_name="お問合せ受付完了通知"
+        mail_templete_subject="お問合せを受け付けました。"
+        mail_templete_header="お問合せを受け付けました"
+        mail_templete_footer="このメールは送信専用です。||CHR(13)||CHR(10)||スクール検索サイト School Serach：http://localhost:8080/school-search/"
+    />
+    <mail_templetes
+        mail_templete_id="2"
+        mail_templete_name="お問合せ受付通知"
+        mail_templete_subject="お問合せがありました。"
+        mail_templete_header="お問合せがありました。"
+        mail_templete_footer="このメールは送信専用です。||CHR(13)||CHR(10)||スクール検索サイト School Serach：http://localhost:8080/school-search/"
+    />
+    <prefectures
+        prefecture_id="3"
+        prefecture_name="東京都"
+    />
+    <accounts
+        account_id="1"
+        last_name="田中"
+        first_name="太郎"
+        last_name_kana="タナカ"
+        first_name_kana="タロウ"
+        prefecture_id="3"
+        mail_address="tanaka@example.com"
+        password="password"
+        account_status="1"
+    />
+    <contact_statuses
+        contact_status_id="2"
+        contact_status_name="受付済"
+    />
+    <contact_statuses
+        contact_status_id="3"
+        contact_status_name="連絡済"
+    />
+    <contact_statuses
+        contact_status_id="4"
+        contact_status_name="電話済"
+    />
+</dataset>

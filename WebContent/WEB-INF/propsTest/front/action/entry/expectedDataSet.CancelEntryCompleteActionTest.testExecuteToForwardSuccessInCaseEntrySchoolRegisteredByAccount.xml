@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <entries
+        entry_id="6"
+        entry_school_id="61"
+        applicant_account_id="42"
+        entry_question="申込時の質問1"
+        entry_status_id="3"
+    />
+</dataset>

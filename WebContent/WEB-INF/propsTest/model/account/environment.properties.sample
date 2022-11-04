@@ -1,0 +1,4 @@
+# モジュールパス
+module.path={ルートからの絶対パス}/struts-school-search
+# 画像ファイルの格納先パス
+img.path=/img/

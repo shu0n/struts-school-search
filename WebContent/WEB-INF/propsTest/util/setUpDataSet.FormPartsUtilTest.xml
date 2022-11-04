@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <prefectures
+        prefecture_id="1"
+        prefecture_name="北海道"
+    />
+    <prefectures
+        prefecture_id="2"
+        prefecture_name="青森県"
+    />
+    <prefectures
+        prefecture_id="3"
+        prefecture_name="岩手県"
+    />
+    <prefectures
+        prefecture_id="4"
+        prefecture_name="宮城県"
+    />
+    <prefectures
+        prefecture_id="5"
+        prefecture_name="秋田県"
+    />
+    <prefectures
+        prefecture_id="6"
+        prefecture_name="山形県"
+    />
+    <prefectures
+        prefecture_id="7"
+        prefecture_name="福島県"
+    />
+    <prefectures
+        prefecture_id="8"
+        prefecture_name="茨城県"
+    />
+    <prefectures
+        prefecture_id="9"
+        prefecture_name="栃木県"
+    />
+    <prefectures
+        prefecture_id="10"
+        prefecture_name="群馬県"
+    />
+</dataset>

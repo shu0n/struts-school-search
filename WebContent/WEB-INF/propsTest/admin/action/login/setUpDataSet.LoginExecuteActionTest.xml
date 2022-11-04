@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <admin_departments
+        admin_department_id="1"
+        admin_department_name="システム管理部"
+        admin_department_authority="9"
+        admin_department_status="1"
+        />
+    <admin_departments
+        admin_department_id="2"
+        admin_department_name="営業部"
+        admin_department_authority="1"
+        admin_department_status="1"
+    />
+    <admins
+        admin_id="1"
+        admin_department_id="2"
+        admin_last_name="管理者"
+        admin_first_name="太郎"
+        admin_last_name_kana="カンリシャ"
+        admin_first_name_kana="タロウ"
+        admin_mail_address="system@example.com"
+        admin_password="06ef1c1b7ddea5bf5cf431b2f93872b235967f2a93dca4098e59fe353c4a284c"
+        admin_authority="9"
+        admin_status="1"
+    />
+    <admins
+        admin_id="2"
+        admin_department_id="1"
+        admin_last_name="サブ管理者"
+        admin_first_name="次郎"
+        admin_last_name_kana="サブカンリシャ"
+        admin_first_name_kana="ジロウ"
+        admin_mail_address="subsystem@example.com"
+        admin_password="df6684acbd580d0441dfe50365bcaa91c0429a1721eceacb81c7944b350a9ba5"
+        admin_authority="8"
+        admin_status="0"
+    />
+</dataset>

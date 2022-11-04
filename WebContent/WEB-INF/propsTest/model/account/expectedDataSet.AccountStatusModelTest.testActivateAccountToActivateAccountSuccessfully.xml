@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <accounts
+        account_id="5"
+        last_name="三島"
+        first_name="四郎"
+        last_name_kana="ミシマ"
+        first_name_kana="シロウ"
+        prefecture_id="4"
+        mail_address="test4@example.com"
+        password="pdssword"
+        account_status="1"
+        activate_token="[null]"
+        activate_effective_date="[null]"
+    />
+</dataset>

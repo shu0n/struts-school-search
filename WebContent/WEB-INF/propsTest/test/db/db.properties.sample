@@ -1,0 +1,4 @@
+driverClassName=oracle.jdbc.driver.OracleDriver
+url=jdbc:oracle:thin:{DBアクセス時のユーザー名}/{DBアクセス時のパスワード}@//{DBサーバーのIPアドレス}:{ポート番号}/schlpdb
+user={DBアクセス時のユーザー名}
+password={DBアクセス時のパスワード}

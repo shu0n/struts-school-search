@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <prefectures
+        prefecture_id="11"
+        prefecture_name="北海道"
+    />
+    <accounts
+        account_id="1"
+        last_name="田中"
+        first_name="太郎"
+        last_name_kana="タナカ"
+        first_name_kana="タロウ"
+        prefecture_id="11"
+        mail_address="tanaka@example.com"
+        password="password"
+        account_status="1"
+    />
+    <contact_statuses
+        contact_status_id="2"
+        contact_status_name="受付済"
+    />
+    <contact_statuses
+        contact_status_id="4"
+        contact_status_name="連絡済"
+    />
+    <contacts
+        contact_id="3"
+        contact_account_id="1"
+        contact_last_name="田中中"
+        contact_first_name="太郎郎"
+        contact_last_name_kana="タナカナカ"
+        contact_first_name_kana="タロウロウ"
+        contact_mail_address="tanakanaka@example.com"
+        contact_content="問い合わせ3"
+        contact_status_id="2"
+    />
+</dataset>

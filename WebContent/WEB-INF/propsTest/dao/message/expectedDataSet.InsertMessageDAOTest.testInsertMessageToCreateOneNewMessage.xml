@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <messages
+        reply_message_id="[null]"
+        entry_id="6"
+        sender_account_id="3"
+        recipient_account_id="4"
+        message_subject="メッセージ題名1"
+        message_body="メッセージ本文1"
+        opened_flag="0"
+        opened_at="[null]"
+        sender_delete_flag="0"
+        sender_flag_updated_at="[null]"
+        recipient_delete_flag="0"
+        recipient_flag_updated_at="[null]"
+    />
+</dataset>

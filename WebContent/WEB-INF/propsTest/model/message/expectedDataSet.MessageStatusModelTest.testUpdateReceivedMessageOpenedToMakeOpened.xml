@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <messages
+        message_id="5"
+        reply_message_id="4"
+        entry_id="10"
+        sender_account_id="3"
+        recipient_account_id="1"
+        message_subject="メッセージ題名5"
+        message_body="メッセージ本文5"
+        sended_at="2022-01-08 08:08:08"
+        opened_flag="1"
+        opened_at="2022-01-02 03:04:05.678"
+        sender_delete_flag="1"
+        sender_flag_updated_at="2022-01-10 10:10:10"
+        recipient_delete_flag="1"
+        recipient_flag_updated_at="2022-01-11 11:11:11"
+    />
+</dataset>

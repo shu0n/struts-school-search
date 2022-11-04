@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  httpd:
+    container_name: struts-httpd
+    build: ./httpd
+    image: httpd
+    environment:
+      - TZ=Asia/Tokyo
+    ports:
+      - "{ホスト側のポート番号}:80"
+    depends_on:
+      - tomcat
+  tomcat:
+    container_name: struts-tomcat
+    build: ./tomcat
+    image: tomcat
+    expose:
+      - "8009"
+    command: >
+      /bin/bash -c "cd /etc/tomcat/webapps/struts-school-search &&
+                    cd /etc/tomcat/webapps/struts-school-search/WEB-INF &&
+                    ant compile &&
+                    /etc/tomcat/bin/catalina.sh run"
+    volumes:
+      - ../WebContent:/etc/tomcat/webapps/struts-school-search
+    environment:
+      - TZ=Asia/Tokyo

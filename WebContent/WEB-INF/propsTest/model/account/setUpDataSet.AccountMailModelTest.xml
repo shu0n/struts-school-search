@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <mail_templetes
+        mail_templete_id="1"
+        mail_templete_name="アカウント作成完了通知"
+        mail_templete_subject="School Serachにアカウントを作成しました。"
+        mail_templete_header="School Searchにアカウントを作成しました。"
+        mail_templete_footer="このメールは送信専用です。||CHR(13)||CHR(10)||スクール検索サイト School Serach：http://localhost:8080/school-search/"
+    />
+    <mail_templetes
+        mail_templete_id="2"
+        mail_templete_name="パスワード再発行申請受付完了通知"
+        mail_templete_subject="パスワード再発行の申請を受け付けました。"
+        mail_templete_header="パスワード再発行の申請を受け付けました。"
+        mail_templete_footer="このメールは送信専用です。||CHR(13)||CHR(10)||スクール検索サイト School Serach：http://localhost:8080/school-search/"
+    />
+    <mail_templetes
+        mail_templete_id="3"
+        mail_templete_name="退会完了通知"
+        mail_templete_subject="School Serachから退会しました。"
+        mail_templete_header="School Serachから退会しました。"
+        mail_templete_footer="このメールは送信専用です。||CHR(13)||CHR(10)||スクール検索サイト School Serach：http://localhost:8080/school-search/"
+    />
+</dataset>

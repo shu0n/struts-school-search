@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <sexes
+        sex_id="1"
+        sex_name="男性"
+    />
+    <sexes
+        sex_id="2"
+        sex_name="女性"
+    />
+    <sexes
+        sex_id="3"
+        sex_name="その他"
+    />
+    <prefectures
+        prefecture_id="1"
+        prefecture_name="北海道"
+    />
+    <prefectures
+        prefecture_id="2"
+        prefecture_name="東京都"
+    />
+    <prefectures
+        prefecture_id="3"
+        prefecture_name="静岡県"
+    />
+    <prefectures
+        prefecture_id="4"
+        prefecture_name="京都府"
+    />
+    <accounts
+        account_id="1"
+        last_name="田中"
+        first_name="太郎"
+        last_name_kana="タナカ"
+        first_name_kana="タロウ"
+        prefecture_id="2"
+        mail_address="tanaka@example.com"
+        password="password"
+        account_status="1"
+    />
+</dataset>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <prefectures
+        prefecture_id="2"
+        prefecture_name="北海道"
+    />
+    <accounts
+        account_id="1"
+        last_name="田中"
+        first_name="太郎"
+        last_name_kana="タナカ"
+        first_name_kana="タロウ"
+        prefecture_id="2"
+        mail_address="tanaka@example.com"
+        password="password"
+        account_status="1"
+    />
+    <contact_statuses
+        contact_status_id="3"
+        contact_status_name="受付済"
+    />
+</dataset>

@@ -1,0 +1,6 @@
+スクールID,登録者アカウントID,登録者管理者ID,スクール名,カテゴリーID,スクール概要,スクール詳細,郵便番号1,郵便番号2,都道府県ID,市区町村,住所1,住所2,費用,費用補足,スクールURL,公開可否,申込可否,一覧画面画像,詳細画面画像1ファイル名,詳細画面画像2ファイル名,詳細画面画像3ファイル名,"詳細画面画像4ファイル名""",詳細画面画像5ファイル名,詳細画面画像6ファイル名,詳細画面画像7ファイル名,詳細画面画像8ファイル名
+,1,,テストスクール４,1,スクール概要４,スクール詳細４,901,2345,1,北海道市,北海道町,北海道区,2109,費用補足４,http://test4.com,1,1,summary_image41.png,detail_image41.png,detail_image42.png,detail_image43.png,detail_image44.png,detail_image45.png,detail_image46.png,detail_image47.png,detail_image48.png
+,,2,テストスクール５,2,スクール概要５,スクール詳細５,012,3456,2,東京市,東京町,東京区,1098,費用補足５,,0,0,,,,,,,,,
+,3,,テストスクール６,3,スクール概要６,スクール詳細６,123,4567,3,愛知市,愛知町,愛知区,9876,費用補足６,http://test6.com,1,1,summary_image61.png,detail_image61.png,,,,,,,
+1,2,,テストスクール１,3,更新スクール概要１,更新スクール詳細１,123,4567,4,大阪市,大阪区,大阪町,5432,費用補足１,http://test1.com,1,1,summary_image11.png,detail_image11.png,detail_image12.png,detail_image13.png,detail_image14.png,detail_image15.png,detail_image16.png,detail_image17.png,detail_image18.png
+3,4,,更新テストスクール３,7,スクール概要３,スクール詳細３,890,1234,6,鹿児島市,鹿児島区,鹿児島町,2109,費用補足３,,1,0,update_summary_image31.png,,,,,,,,update_detail_image38.png

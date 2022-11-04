@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <entry_statuses
+        entry_status_id="1"
+        entry_status_name="申込済"
+    />
+    <entry_statuses
+        entry_status_id="2"
+        entry_status_name="連絡済"
+    />
+    <entry_statuses
+        entry_status_id="3"
+        entry_status_name="キャンセル済"
+    />
+</dataset>

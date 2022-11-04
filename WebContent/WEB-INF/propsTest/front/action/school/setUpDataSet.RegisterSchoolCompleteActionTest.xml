@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <prefectures
+        prefecture_id="14"
+        prefecture_name="大阪府"
+    />
+    <accounts
+        account_id="22"
+        last_name="佐藤"
+        first_name="次郎"
+        last_name_kana="サトウ"
+        first_name_kana="ジロウ"
+        prefecture_id="14"
+        mail_address="sato@example.com"
+        profile_image_file_name="profile_image2.png"
+        self_introduction="自己紹介2"
+        password="pcssword"
+        account_status="1"
+    />
+    <categories
+        category_id="43"
+        category_name="日本文化"
+        category_status="1"
+    />
+</dataset>

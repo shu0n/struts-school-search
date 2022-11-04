@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <schools
+        registrant_account_id="[null]"
+        registrant_admin_id="1"
+        school_name="テストスクール6"
+        school_category_id="24"
+        school_summary="スクール概要6"
+        school_description="スクール詳細6"
+        school_zip_code1="123"
+        school_zip_code2="5678"
+        school_prefecture_id="12"
+        school_city="東京市"
+        school_address1="東京区"
+        school_address2="東京町"
+        school_fee="9876"
+        supplementary_fee="費用補足6"
+        school_url="http://test6.com"
+        school_release_propriety="0"
+        school_entry_propriety="0"
+        summary_image_file_name="summary_image61.png"
+        detail_image1_file_name="detail_image61.png"
+        detail_image2_file_name="detail_image62.png"
+        detail_image3_file_name="detail_image63.png"
+        detail_image4_file_name="detail_image64.png"
+        detail_image5_file_name="detail_image65.png"
+        detail_image6_file_name="detail_image66.png"
+        detail_image7_file_name="detail_image67.png"
+        detail_image8_file_name="detail_image68.png"
+        school_delete_flag="0"
+        school_deleted_at="[null]"
+    />
+</dataset>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <accounts
+        account_id="2"
+        last_name="棚橋"
+        first_name="四郎"
+        last_name_kana="タナハシ"
+        first_name_kana="シロウ"
+        sex_id="1"
+        birth_date="[null]"
+        prefecture_id="3"
+        mail_address="tanahashi@example.com"
+        profile_image_file_name="[null]"
+        self_introduction="棚橋の自己紹介です。"
+        password="pcssword"
+        account_status="0"
+    />
+</dataset>

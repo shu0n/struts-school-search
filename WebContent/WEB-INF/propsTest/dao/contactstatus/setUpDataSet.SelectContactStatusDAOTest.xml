@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <contact_statuses
+        contact_status_id="1"
+        contact_status_name="受付済"
+    />
+    <contact_statuses
+        contact_status_id="2"
+        contact_status_name="連絡済"
+    />
+</dataset>

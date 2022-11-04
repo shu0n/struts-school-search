@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <mail_templetes
+        mail_templete_id="1"
+        mail_templete_name="お問合せ受付完了通知"
+        mail_templete_subject="お問合せを受け付けました。"
+        mail_templete_header="お問合せを受け付けました"
+        mail_templete_footer="このメールは送信専用です。||CHR(13)||CHR(10)||スクール検索サイト School Serach：http://localhost:8080/school-search/"
+    />
+    <mail_templetes
+        mail_templete_id="2"
+        mail_templete_name="お問合せ受付通知"
+        mail_templete_subject="お問合せがありました。"
+        mail_templete_header="お問合せがありました。"
+        mail_templete_footer="このメールは送信専用です。||CHR(13)||CHR(10)||スクール検索サイト School Serach：http://localhost:8080/school-search/"
+    />
+</dataset>

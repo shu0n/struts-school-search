@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <schools
+        school_id="6"
+        registrant_account_id="23"
+        registrant_admin_id="[null]"
+        school_name="更新テストスクール6"
+        school_category_id="46"
+        school_summary="更新スクール概要6"
+        school_description="更新スクール詳細6"
+        school_zip_code1="124"
+        school_zip_code2="6789"
+        school_prefecture_id="13"
+        school_city="愛知市"
+        school_address1="愛知区"
+        school_address2="[null]"
+        school_fee="8765"
+        supplementary_fee="[null]"
+        school_url="[null]"
+        school_release_propriety="0"
+        school_entry_propriety="0"
+        summary_image_file_name="[null]"
+        detail_image1_file_name="[null]"
+        detail_image2_file_name="[null]"
+        detail_image3_file_name="[null]"
+        detail_image4_file_name="[null]"
+        detail_image5_file_name="[null]"
+        detail_image6_file_name="[null]"
+        detail_image7_file_name="[null]"
+        detail_image8_file_name="[null]"
+    />
+</dataset>

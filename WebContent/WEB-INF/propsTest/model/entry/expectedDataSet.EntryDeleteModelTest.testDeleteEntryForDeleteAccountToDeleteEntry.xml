@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <entries
+        entry_id="6"
+        entry_school_id="1"
+        applicant_account_id="1"
+        entry_question="申込時の質問1"
+        entry_status_id="1"
+        entry_delete_flag="1"
+    />
+    <entries
+        entry_id="7"
+        entry_school_id="2"
+        applicant_account_id="1"
+        entry_question="申込時の質問2"
+        entry_status_id="2"
+        entry_delete_flag="1"
+    />
+    <entries
+        entry_id="8"
+        entry_school_id="3"
+        applicant_account_id="1"
+        entry_question="申込時の質問3"
+        entry_status_id="3"
+        entry_delete_flag="1"
+    />
+    <entries
+        entry_id="9"
+        entry_school_id="4"
+        applicant_account_id="2"
+        entry_question="申込時の質問4"
+        entry_status_id="1"
+        entry_delete_flag="0"
+    />
+    <entries
+        entry_id="11"
+        entry_school_id="5"
+        applicant_account_id="3"
+        entry_question="申込時の質問6"
+        entry_status_id="3"
+        entry_delete_flag="0"
+    />
+</dataset>

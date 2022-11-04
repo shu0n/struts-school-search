@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <entries
+        entry_id="6"
+        entry_school_id="3"
+        applicant_account_id="1"
+        entry_question="申込時の質問1"
+        entry_status_id="1"
+        entried_at="2022-01-02 03:04:05.678"
+        entry_updated_at="2022-10-11 12:13:14.567"
+        entry_delete_flag="1"
+        entry_deleted_at="2022-10-11 12:13:14.567"
+    />
+</dataset>

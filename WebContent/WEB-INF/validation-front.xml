@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<!DOCTYPE form-validation PUBLIC
+     "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
+     "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
+
+<form-validation>
+
+<!--
+     This is a minimal Validator form file with a couple of examples.
+-->
+
+    <global>
+
+        <!-- An example global constant
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^\d{5}\d*$</constant-value>
+        </constant>
+        end example-->
+
+    </global>
+
+    <formset>
+
+        <form name="FrontLoginExecuteActionForm">
+            <field
+                property="mailAddress"
+                depends="required, email">
+            </field>
+            <field
+                property="password"
+                depends="required, minlength, maxlength, mask">
+                <var>
+                    <var-name>minlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>16</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[0-9a-zA-Z]*$</var-value>
+                </var>
+            </field>
+        </form>
+
+        <form name="FrontCreateAccountActionForm">
+            <field
+                property="lastName"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>20</var-value>
+                </var>
+            </field>
+            <field
+                property="firstName"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>20</var-value>
+                </var>
+            </field>
+            <field
+                property="lastNameKana"
+                depends="required, maxlength, mask">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>40</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[ァ-ヴー]*$</var-value>
+                </var>
+            </field>
+            <field
+                property="firstNameKana"
+                depends="required, maxlength, mask">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>40</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[ァ-ヴー]*$</var-value>
+                </var>
+            </field>
+            <field
+                property="birthYear"
+                depends="intRange, validwhen">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1920</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>2020</var-value>
+                </var>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>((((*this* == null) and (birthMonth == null)) and (birthDay == null)) or (((*this* != null) and (birthMonth != null)) and (birthDay != null)))</var-value>
+                </var>
+            </field>
+            <field
+                property="birthMonth"
+                depends="intRange">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>12</var-value>
+                </var>
+            </field>
+            <field
+                property="birthDay"
+                depends="intRange">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>31</var-value>
+                </var>
+            </field>
+            <field
+                property="prefectureId"
+                depends="required">
+            </field>
+            <field
+                property="mailAddress"
+                depends="required, email, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>250</var-value>
+                </var>
+            </field>
+            <field
+                property="selfIntroduction"
+                depends="maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>300</var-value>
+                </var>
+            </field>
+            <field
+                property="password"
+                depends="required, minlength, maxlength, mask">
+                <var>
+                    <var-name>minlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>16</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[0-9a-zA-Z]*$</var-value>
+                </var>
+            </field>
+        </form>
+
+        <form name="FrontEditAccountActionForm">
+            <field
+                property="lastName"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>20</var-value>
+                </var>
+            </field>
+            <field
+                property="firstName"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>20</var-value>
+                </var>
+            </field>
+            <field
+                property="lastNameKana"
+                depends="required, maxlength, mask">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>40</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[ァ-ヴー]*$</var-value>
+                </var>
+            </field>
+            <field
+                property="firstNameKana"
+                depends="required, maxlength, mask">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>40</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[ァ-ヴー]*$</var-value>
+                </var>
+            </field>
+            <field
+                property="birthYear"
+                depends="intRange, validwhen">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1920</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>2099</var-value>
+                </var>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>((((*this* == null) and (birthMonth == null)) and (birthDay == null)) or (((*this* != null) and (birthMonth != null)) and (birthDay != null)))</var-value>
+                </var>
+            </field>
+            <field
+                property="birthMonth"
+                depends="intRange">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>12</var-value>
+                </var>
+            </field>
+            <field
+                property="birthDay"
+                depends="intRange">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>31</var-value>
+                </var>
+            </field>
+            <field
+                property="prefectureId"
+                depends="required">
+            </field>
+            <field
+                property="mailAddress"
+                depends="required, email, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>250</var-value>
+                </var>
+            </field>
+            <field
+                property="selfIntroduction"
+                depends="maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>150</var-value>
+                </var>
+            </field>
+        </form>
+
+        <form name="FrontChangePasswordActionForm">
+            <field
+                property="password"
+                depends="required, minlength, maxlength, mask">
+                <var>
+                    <var-name>minlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>16</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[0-9a-zA-Z]*$</var-value>
+                </var>
+            </field>
+            <field
+                property="newPassword"
+                depends="required, minlength, maxlength, mask">
+                <var>
+                    <var-name>minlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>16</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[0-9a-zA-Z]*$</var-value>
+                </var>
+            </field>
+        </form>
+
+        <form name="FrontRequestReissueActionForm">
+            <field
+                property="mailAddress"
+                depends="required, email, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>250</var-value>
+                </var>
+            </field>
+        </form>
+
+        <form name="FrontExecuteReissueActionForm">
+            <field
+                property="password"
+                depends="required, minlength, mask">
+                <var>
+                    <var-name>minlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>16</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[0-9a-zA-Z]*$</var-value>
+                </var>
+            </field>
+        </form>
+
+        <form name="FrontSearchSchoolActionForm">
+            <field
+                property="likeSchoolName"
+                depends="maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>50</var-value>
+                </var>
+            </field>
+            <field
+                property="minSchoolFee"
+                depends="maxlength, mask">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^\d*$</var-value>
+                </var>
+            </field>
+            <field
+                property="maxSchoolFee"
+                depends="maxlength, mask">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^\d*$</var-value>
+                </var>
+            </field>
+        </form>
+
+        <form name="FrontRegisterSchoolActionForm">
+            <field
+                property="schoolName"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>50</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolCategoryId"
+                depends="required">
+            </field>
+            <field
+                property="schoolSummary"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>150</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolDescription"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>1200</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolZipCode1"
+                depends="required, mask">
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^\d{3}$</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolZipCode2"
+                depends="required, mask">
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^\d{4}$</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolPrefectureId"
+                depends="required">
+            </field>
+            <field
+                property="schoolCity"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>20</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolAddress1"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>150</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolAddress2"
+                depends="maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>150</var-value>
+                </var>
+            </field>
+            <field
+                property="strSchoolFee"
+                depends="required, maxlength, mask">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^\d*$</var-value>
+                </var>
+            </field>
+            <field
+                property="supplementaryFee"
+                depends="maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>150</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolUrl"
+                depends="url, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>290</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolReleasePropriety"
+                depends="required">
+            </field>
+            <field
+                property="schoolEntryPropriety"
+                depends="required">
+            </field>
+        </form>
+
+        <form name="FrontEditSchoolActionForm">
+            <field
+                property="schoolName"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>50</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolCategoryId"
+                depends="required">
+            </field>
+            <field
+                property="schoolSummary"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>150</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolDescription"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>1200</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolZipCode1"
+                depends="required, mask">
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^\d{3}$</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolZipCode2"
+                depends="required, mask">
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^\d{4}$</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolPrefectureId"
+                depends="required">
+            </field>
+            <field
+                property="schoolCity"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>20</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolAddress1"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>150</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolAddress2"
+                depends="maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>150</var-value>
+                </var>
+            </field>
+            <field
+                property="strSchoolFee"
+                depends="required, maxlength, mask">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^\d*$</var-value>
+                </var>
+            </field>
+            <field
+                property="supplementaryFee"
+                depends="maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>150</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolUrl"
+                depends="url, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>290</var-value>
+                </var>
+            </field>
+            <field
+                property="schoolReleasePropriety"
+                depends="required">
+            </field>
+            <field
+                property="schoolEntryPropriety"
+                depends="required">
+            </field>
+        </form>
+
+        <form name="FrontSearchReceivedEntryActionForm">
+           <field
+                property="likeApplicantLastName"
+                depends="maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>20</var-value>
+                </var>
+            </field>
+            <field
+                property="likeApplicantFirstName"
+                depends="maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>20</var-value>
+                </var>
+            </field>
+            <field
+                property="likeApplicantLastNameKana"
+                depends="maxlength ,mask">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>40</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[ァ-ヴー]*$</var-value>
+                </var>
+            </field>
+            <field
+                property="likeApplicantFirstNameKana"
+                depends="maxlength, mask">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>40</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[ァ-ヴー]*$</var-value>
+                </var>
+            </field>
+            <field
+                property="fromEntriedYear"
+                depends="intRange">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1920</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>2099</var-value>
+                </var>
+            </field>
+            <field
+                property="fromEntriedMonth"
+                depends="intRange">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>12</var-value>
+                </var>
+            </field>
+            <field
+                property="fromEntriedDay"
+                depends="intRange">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>31</var-value>
+                </var>
+            </field>
+            <field
+                property="toEntriedYear"
+                depends="intRange">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1920</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>2099</var-value>
+                </var>
+            </field>
+            <field
+                property="toEntriedMonth"
+                depends="intRange">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>12</var-value>
+                </var>
+            </field>
+            <field
+                property="toEntriedDay"
+                depends="intRange">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>31</var-value>
+                </var>
+            </field>
+            <field
+                property="fromEntryUpdatedYear"
+                depends="intRange">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1920</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>2099</var-value>
+                </var>
+            </field>
+            <field
+                property="fromEntryUpdatedMonth"
+                depends="intRange">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>12</var-value>
+                </var>
+            </field>
+            <field
+                property="fromEntryUpdatedDay"
+                depends="intRange">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>31</var-value>
+                </var>
+            </field>
+            <field
+                property="toEntryUpdatedYear"
+                depends="intRange">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1920</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>2099</var-value>
+                </var>
+            </field>
+            <field
+                property="toEntryUpdatedMonth"
+                depends="intRange">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>12</var-value>
+                </var>
+            </field>
+            <field
+                property="toEntryUpdatedDay"
+                depends="intRange">
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>31</var-value>
+                </var>
+            </field>
+        </form>
+
+        <form name="FrontMakeEntryActionForm">
+            <field
+                property="entryQuestion"
+                depends="maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>1000</var-value>
+                </var>
+            </field>
+        </form>
+
+        <form name="FrontSendMessageActionForm">
+            <field
+                property="messageSubject"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>20</var-value>
+                </var>
+            </field>
+            <field
+                property="messageBody"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>1000</var-value>
+                </var>
+            </field>
+        </form>
+
+        <form name="FrontReplyMessageActionForm">
+            <field
+                property="messageSubject"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>20</var-value>
+                </var>
+            </field>
+            <field
+                property="messageBody"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>1000</var-value>
+                </var>
+            </field>
+        </form>
+
+        <form name="FrontMakeContactActionForm">
+            <field
+                property="contactLastName"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>20</var-value>
+                </var>
+            </field>
+            <field
+                property="contactFirstName"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>20</var-value>
+                </var>
+            </field>
+            <field
+                property="contactLastNameKana"
+                depends="required, maxlength, mask">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>40</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[ァ-ヴー]*$</var-value>
+                </var>
+            </field>
+            <field
+                property="contactFirstNameKana"
+                depends="required, maxlength, mask">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>40</var-value>
+                </var>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[ァ-ヴー]*$</var-value>
+                </var>
+            </field>
+            <field
+                property="contactMailAddress"
+                depends="required, email">
+            </field>
+            <field
+                property="contactContent"
+                depends="required, maxlength">
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>1000</var-value>
+                </var>
+            </field>
+        </form>
+
+    </formset>
+
+</form-validation>

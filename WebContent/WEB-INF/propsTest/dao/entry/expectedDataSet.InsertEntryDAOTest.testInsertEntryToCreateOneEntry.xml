@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <entries
+        entry_school_id="4"
+        applicant_account_id="2"
+        entry_question="月謝以外の費用はかかりますか。"
+        entry_status_id="1"
+        entry_delete_flag="0"
+        entry_deleted_at="[null]"
+    />
+</dataset>

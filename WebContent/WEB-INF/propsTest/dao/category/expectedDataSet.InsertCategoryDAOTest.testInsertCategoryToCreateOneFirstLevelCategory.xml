@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <categories
+        category_name="ビジネス"
+        senior_category_id="[null]"
+        category_status="1"
+        category_delete_flag="0"
+        category_deleted_at="[null]"
+    />
+</dataset>

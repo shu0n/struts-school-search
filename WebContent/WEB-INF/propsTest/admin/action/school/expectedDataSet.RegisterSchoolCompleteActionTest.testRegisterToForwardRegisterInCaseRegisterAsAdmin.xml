@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <schools
+        registrant_account_id="[null]"
+        registrant_admin_id="61"
+        school_name="テストスクール2"
+        school_category_id="44"
+        school_summary="スクール概要2"
+        school_description="スクール詳細2"
+        school_zip_code1="124"
+        school_zip_code2="4568"
+        school_prefecture_id="15"
+        school_city="山口市"
+        school_address1="山口区"
+        school_address2="山口町"
+        school_fee="3210"
+        supplementary_fee="費用補足2"
+        school_url="http://test2.com"
+        school_release_propriety="1"
+        school_entry_propriety="1"
+        summary_image_file_name="summaryImage11.png"
+        detail_image1_file_name="detailImage11.png"
+        detail_image2_file_name="detailImage12.png"
+        detail_image3_file_name="detailImage13.png"
+        detail_image4_file_name="detailImage14.png"
+        detail_image5_file_name="detailImage15.png"
+        detail_image6_file_name="detailImage16.png"
+        detail_image7_file_name="detailImage17.png"
+        detail_image8_file_name="detailImage18.png"
+    />
+</dataset>

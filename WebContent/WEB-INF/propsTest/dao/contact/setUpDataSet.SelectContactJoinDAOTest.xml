@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <prefectures
+        prefecture_id="11"
+        prefecture_name="北海道"
+    />
+    <accounts
+        account_id="1"
+        last_name="田中"
+        first_name="太郎"
+        last_name_kana="タナカ"
+        first_name_kana="タロウ"
+        prefecture_id="11"
+        mail_address="tanaka@example.com"
+        password="password"
+        account_status="1"
+    />
+    <accounts
+        account_id="2"
+        last_name="佐藤"
+        first_name="次郎"
+        last_name_kana="サトウ"
+        first_name_kana="ジロウ"
+        prefecture_id="11"
+        mail_address="sato@example.com"
+        password="password"
+        account_status="1"
+    />
+    <accounts
+        account_id="3"
+        last_name="高橋"
+        first_name="三郎"
+        last_name_kana="タカハシ"
+        first_name_kana="サブロウ"
+        prefecture_id="11"
+        mail_address="takahashi@example.com"
+        password="password"
+        account_status="1"
+    />
+    <contact_statuses
+        contact_status_id="1"
+        contact_status_name="受付済"
+    />
+    <contact_statuses
+        contact_status_id="2"
+        contact_status_name="連絡済"
+    />
+    <contact_statuses
+        contact_status_id="3"
+        contact_status_name="電話済"
+    />
+    <contacts
+        contact_id="1"
+        contact_account_id="[null]"
+        contact_last_name="前田"
+        contact_first_name="五郎"
+        contact_last_name_kana="マエダ"
+        contact_first_name_kana="ゴロウ"
+        contact_mail_address="maeda@example.com"
+        contact_content="問い合わせ1"
+        contact_status_id="2"
+        contacted_at="2022-01-02 03:04:05.678"
+        contact_updated_at="2022-01-03 04:05:06.789"
+        contact_delete_flag="0"
+        contact_deleted_at="[null]"
+    />
+    <contacts
+        contact_id="2"
+        contact_account_id="[null]"
+        contact_last_name="青野"
+        contact_first_name="六郎"
+        contact_last_name_kana="アオノ"
+        contact_first_name_kana="ロクロウ"
+        contact_mail_address="aono@example.com"
+        contact_content="問い合わせ2"
+        contact_status_id="1"
+        contacted_at="2022-01-04 05:06:07.891"
+        contact_updated_at="2022-01-05 06:07:08.912"
+        contact_delete_flag="0"
+        contact_deleted_at="[null]"
+    />
+    <contacts
+        contact_id="3"
+        contact_account_id="1"
+        contact_last_name="田中中"
+        contact_first_name="太郎郎"
+        contact_last_name_kana="タナカナカ"
+        contact_first_name_kana="タロウロウ"
+        contact_mail_address="tanakanaka@example.com"
+        contact_content="問い合わせ3"
+        contact_status_id="2"
+        contacted_at="2022-01-06 07:08:09.123"
+        contact_updated_at="2022-01-07 08:09:10.234"
+        contact_delete_flag="0"
+        contact_deleted_at="[null]"
+    />
+    <contacts
+        contact_id="4"
+        contact_account_id="2"
+        contact_last_name="佐藤藤"
+        contact_first_name="次郎郎"
+        contact_last_name_kana="サトウトウ"
+        contact_first_name_kana="ジロウロウ"
+        contact_mail_address="satoto@example.com"
+        contact_content="問い合わせ4"
+        contact_status_id="1"
+        contacted_at="2022-01-08 09:10:11.345"
+        contact_updated_at="2022-01-09 10:11:12.456"
+        contact_delete_flag="0"
+        contact_deleted_at="[null]"
+    />
+    <contacts
+        contact_id="5"
+        contact_account_id="2"
+        contact_last_name="佐藤藤"
+        contact_first_name="次郎郎"
+        contact_last_name_kana="サトウトウ"
+        contact_first_name_kana="ジロウロウ"
+        contact_mail_address="satoto@example.com"
+        contact_content="問い合わせ5"
+        contact_status_id="3"
+        contacted_at="2022-01-10 11:12:13.567"
+        contact_updated_at="2022-01-11 12:13:14.678"
+        contact_delete_flag="0"
+        contact_deleted_at="[null]"
+    />
+    <contacts
+        contact_id="6"
+        contact_account_id="3"
+        contact_last_name="高橋橋"
+        contact_first_name="三郎郎"
+        contact_last_name_kana="サトウトウ"
+        contact_first_name_kana="サブロウロウ"
+        contact_mail_address="takahashihashi@example.com"
+        contact_content="問い合わせ6"
+        contact_status_id="2"
+        contacted_at="2022-01-12 13:14:15.789"
+        contact_updated_at="2022-01-13 14:15:16.891"
+        contact_delete_flag="0"
+        contact_deleted_at="[null]"
+    />
+    <contacts
+        contact_id="7"
+        contact_account_id="3"
+        contact_last_name="高橋橋"
+        contact_first_name="三郎郎"
+        contact_last_name_kana="サトウトウ"
+        contact_first_name_kana="サブロウロウ"
+        contact_mail_address="takahashihashi@example.com"
+        contact_content="問い合わせ7"
+        contact_status_id="2"
+        contacted_at="2022-01-14 15:16:17.912"
+        contact_updated_at="2022-01-15 16:17:18.123"
+        contact_delete_flag="1"
+        contact_deleted_at="2022-01-16 17:18:19.234"
+    />
+</dataset>

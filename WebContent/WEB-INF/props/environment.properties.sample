@@ -1,0 +1,38 @@
+# サイト
+site.name=SchoolSearch
+site.url=http://{WEBサーバーのIPアドレス}:{ポート番号}/struts-school-search/
+
+# お問い合わせ先メールアドレス
+contact.mailaddress={問い合わせ先メールアドレス}
+
+# 有効期間
+activate.effective.time={ミリ秒}
+reissue.effective.time={ミリ秒}
+
+# モジュールパス
+module.path={ルートからの絶対パス}/struts-school-search
+# 画像ファイルの格納先パス
+img.path=/img/
+
+# エラーログファイルの格納先パス
+error.log.path={ルートからの絶対パス}/struts-school-search/WEB-INF/logs
+# エラーログの保存期間(日)
+error.log.retention.period={ログの保存期限日数}
+
+# メールログファイルの格納先パス
+mail.log.path={ルートからの絶対パス}/struts-school-search/WebContent/WEB-INF/logs
+# エラーログの保存期間(日)
+mail.log.retention.period={ログの保存期限日数}
+
+# データベース(ORACLE)
+driverClassName=oracle.jdbc.driver.OracleDriver
+db.url=jdbc:oracle:thin:{DBアクセス時のユーザー名}/{DBアクセス時のパスワード}@//{DBサーバーのIPアドレス}:{ポート番号}/schlpdb
+db.user={DBアクセス時のユーザー名}
+db.password={DBアクセス時のパスワード}
+
+# SMTPサーバー
+mail.smtp.host={SMTPサーバーのIPアドレス}
+mail.smtp.port={SMTPサーバーのポート番号}
+mail.smtp.from={差出元メールアドレス}
+mail.smtp.connectiontimeout={ミリ秒}
+mail.smtp.timeout={ミリ秒}

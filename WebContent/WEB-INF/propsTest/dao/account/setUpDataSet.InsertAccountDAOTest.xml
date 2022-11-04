@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <sexes
+        sex_id="1"
+        sex_name="男性"
+    />
+    <prefectures
+        prefecture_id="2"
+        prefecture_name="北海道"
+    />
+</dataset>

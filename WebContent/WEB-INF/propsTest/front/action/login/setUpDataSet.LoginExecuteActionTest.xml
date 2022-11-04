@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <prefectures
+        prefecture_id="11"
+        prefecture_name="北海道"
+    />
+    <prefectures
+        prefecture_id="12"
+        prefecture_name="福島県"
+    />
+    <prefectures
+        prefecture_id="13"
+        prefecture_name="東京都"
+    />
+    <accounts
+        account_id="1"
+        last_name="田中"
+        first_name="太郎"
+        last_name_kana="タナカ"
+        first_name_kana="タロウ"
+        prefecture_id="12"
+        mail_address="tanaka@example.com"
+        password="a1f937db7135766d9a473feccdf786046ac5b5b32f836965ca403a72ef405b48"
+        account_status="1"
+    />
+    <accounts
+        account_id="2"
+        last_name="山田"
+        first_name="次郎"
+        last_name_kana="ヤマダ"
+        first_name_kana="ジロウ"
+        prefecture_id="11"
+        mail_address="yamada@example.com"
+        password="291f191ef15bdd95b2684f2a58b2c9e35d7d5235e267b3223176a464081ddfaa"
+        account_status="0"
+    />
+</dataset>

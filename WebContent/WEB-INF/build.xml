@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="struts-school-search" basedir=".">
+    <!-- ビルドのベースディレクトリ -->
+    <dirname property="base" file="${basedir}"/>
+
+    <!-- Tomcatのlibディレクトリ -->
+    <property name="dir.tomcat.lib" value="../../../lib"/>
+
+    <!-- アプリケーションのlibディレクトリ -->
+    <property name="dir.app.lib" value="lib"/>
+
+    <!-- srcディレクトリ -->
+    <property name="dir.app.src" value="src"/>
+
+    <!-- 設定ファイルのディレクトリ -->
+    <property name="dir.app.props" value="props"/>
+
+    <!-- classesディレクトリ -->
+    <property name="dir.app.classes" value="classes"/>
+
+    <!-- ソースファイルエンコード -->
+    <property name="src.enc" value="UTF-8"/>
+
+    <!-- クラスパス -->
+    <path id="classpath">
+        <fileset dir="${dir.tomcat.lib}">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${dir.app.lib}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <!-- コンパイル -->
+    <target name="compile" description="コンパイル">
+        <delete dir="${dir.app.classes}"/>
+        <mkdir dir="${dir.app.classes}"/>
+        <javac classpathref="classpath"
+            srcdir="${dir.app.src}"
+            destdir="${dir.app.classes}"
+            encoding="${src.enc}"
+            source="1.8"
+            target="1.8"
+            includeAntRuntime="false"
+            debug="true"/>
+        <copy includeemptydirs="false" todir="${dir.app.classes}">
+            <fileset dir="${dir.app.props}">
+                <exclude name="*.sample"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <!-- アプリケーション(テスト)のlibディレクトリ -->
+    <property name="dir.app.libTest" value="libTest"/>
+
+    <!-- srcTestディレクトリ -->
+    <property name="dir.app.srcTest" value="srcTest"/>
+
+    <!-- 設定ファイル(テスト)のディレクトリ -->
+    <property name="dir.app.propsTest" value="propsTest"/>
+
+    <!-- classesTestディレクトリ -->
+    <property name="dir.app.classesTest" value="classesTest"/>
+
+    <!-- テストソースファイルエンコード -->
+    <property name="srcTest.enc" value="UTF-8"/>
+
+    <!-- テストソースのクラスパス -->
+    <path id="classpath.test">
+        <pathelement location="${dir.app.classes}"/>
+        <fileset dir="${dir.tomcat.lib}">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${dir.app.lib}">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${dir.app.libTest}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <!-- テストソースのコンパイル -->
+    <target name="compileTest" depends="compile" description="テストソースのコンパイル">
+        <delete dir="${dir.app.classesTest}"/>
+        <mkdir dir="${dir.app.classesTest}"/>
+        <javac classpathref="classpath.test"
+            srcdir="${dir.app.srcTest}"
+            destdir="${dir.app.classesTest}"
+            encoding="${srcTest.enc}"
+            source="1.8"
+            target="1.8"
+            includeAntRuntime="false"
+            debug="true"/>
+        <copy includeemptydirs="false" todir="${dir.app.classesTest}">
+            <fileset dir="${dir.app.propsTest}">
+                <exclude name="*.sample"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <!-- 指定されたテストの実行 -->
+    <target name="test" depends="compileTest" description="指定されたテストの実行">
+        <junit haltonfailure="yes">
+            <formatter type="plain" usefile="false"/>
+            <classpath>
+                <path refid="classpath.test"/>
+                <pathelement location="${dir.app.classesTest}"/>
+            </classpath>
+            <test name="${testClassName}"/>
+        </junit>
+    </target>
+
+    <!-- 全てのテストの実行 -->
+    <target name="testAll" depends="compileTest" description="全てのテストの実行">
+        <junit haltonfailure="yes">
+            <formatter type="plain" usefile="false"/>
+            <classpath>
+                <path refid="classpath.test"/>
+                <pathelement location="${dir.app.classesTest}"/>
+            </classpath>
+            <batchtest fork="yes">
+                <fileset dir="${dir.app.classesTest}">
+                    <include name="**/*Test.class"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
+    <!-- classesTestディレクトリ配下のクラスファイルの削除 -->
+    <target name="cleanTest" description="classesTestディレクトリ配下のクラスファイルの削除">
+        <delete dir="${dir.app.classesTest}"/>
+    </target>
+</project>

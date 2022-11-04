@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <accounts
+        account_id="1"
+        last_name="田中"
+        first_name="太郎"
+        last_name_kana="タナカ"
+        first_name_kana="タロウ"
+        sex_id="[null]"
+        birth_date="[null]"
+        prefecture_id="2"
+        mail_address="tanaka@example.com_"
+        profile_image_file_name="[null]"
+        self_introduction="[null]"
+        password="password"
+        account_status="0"
+        activate_token="[null]"
+        activate_effective_date="[null]"
+        reissue_token="[null]"
+        reissue_effective_date="[null]"
+        account_delete_flag="1"
+    />
+</dataset>

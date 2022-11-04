@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <contacts
+        contact_account_id="[null]"
+        contact_last_name="佐藤"
+        contact_first_name="次郎"
+        contact_last_name_kana="サトウ"
+        contact_first_name_kana="ジロウ"
+        contact_mail_address="sato@example.com"
+        contact_content="非会員からの問い合わせです。"
+        contact_status_id="2"
+    />
+</dataset>

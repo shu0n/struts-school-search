@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <mail_templetes
+        mail_templete_id="1"
+        mail_templete_name="アカウント作成完了通知"
+        mail_templete_subject="School Serachにアカウントを作成しました。"
+        mail_templete_header="School Searchにアカウントを作成しました。"
+        mail_templete_footer="このメールは送信専用です。||CHR(13)||CHR(10)||スクール検索サイト School Serach：http://localhost:8080/school-search/"
+        mail_templete_created_at="2020-01-02 03:04:05.678"
+        mail_templete_updated_at="2020-01-03 04:05:06.789"
+        mail_templete_delete_flag="0"
+        mail_templete_deleted_at="[null]"
+    />
+    <sexes
+        sex_id="1"
+        sex_name="男性"
+    />
+    <sexes
+        sex_id="2"
+        sex_name="女性"
+    />
+    <sexes
+        sex_id="3"
+        sex_name="その他"
+    />
+    <prefectures
+        prefecture_id="1"
+        prefecture_name="北海道"
+    />
+    <prefectures
+        prefecture_id="2"
+        prefecture_name="東京都"
+    />
+    <prefectures
+        prefecture_id="3"
+        prefecture_name="静岡県"
+    />
+    <prefectures
+        prefecture_id="4"
+        prefecture_name="京都府"
+    />
+    <accounts
+        account_id="1"
+        last_name="田中"
+        first_name="太郎"
+        last_name_kana="タナカ"
+        first_name_kana="タロウ"
+        prefecture_id="2"
+        mail_address="tanaka@example.com"
+        password="password"
+        account_status="1"
+    />
+</dataset>

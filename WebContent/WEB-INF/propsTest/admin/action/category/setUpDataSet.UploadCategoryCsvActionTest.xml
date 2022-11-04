@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <categories
+        category_id="1"
+        category_name="カテゴリー４"
+        senior_category_id="[null]"
+        category_status="1"
+    />
+    <categories
+        category_id="2"
+        category_name="カテゴリー５"
+        senior_category_id="1"
+        category_status="1"
+    />
+    <categories
+        category_id="3"
+        category_name="カテゴリー6"
+        senior_category_id="1"
+        category_status="0"
+    />
+</dataset>

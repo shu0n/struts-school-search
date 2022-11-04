@@ -1,0 +1,12 @@
+# メールログファイルの格納先パス
+mail.log.path={ルートからの絶対パス}/WEB-INF/propsTest/util
+# エラーログの保存期間(日)
+mail.log.retention.period={ログの保存期限日数}
+
+# SMTPサーバー
+# mail.smtp.portをアクセスできないポート番号に設定する。
+mail.smtp.host={SMTPサーバーのIPアドレス}
+mail.smtp.port={SMTPサーバーのポート番号}
+mail.smtp.from={差出元メールアドレス}
+mail.smtp.connectiontimeout={ミリ秒}
+mail.smtp.timeout={ミリ秒}
