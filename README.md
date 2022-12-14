@@ -24,7 +24,7 @@
     - [リポジトリ](https://github.com/shu0n/oracle)
 
 ## 初回起動
-1. 任意のディレクトリにリポジトリをチェックアウトする。(以下は、macOS v11.61のホームディレクトリにチェックアウトした場合)
+1. 任意のディレクトリにリポジトリをチェックアウトする。(以下は、ホームディレクトリにチェックアウトした場合)
 1. `./struts-school-search/struts-docker-compose/`に移動する。
 1. `docker-compose.yml.sample`をもとに`docker-compose.yml`を作成する。
 1. 作成した`docker-compose.yml`内の設定値を自環境に合わせて編集する。
